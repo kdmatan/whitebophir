@@ -77,7 +77,7 @@ function defineTool(tool, toolCode) {
     requiredCapability: definition.requiredCapability || null,
     drawsOnBoard: definition.drawsOnBoard === true,
     translationKey,
-    label: getDefaultToolLabel(definition.toolId),
+    label: definition.translationKey,
     getIconUrl() {
       return `../${getToolIconPath(definition.toolId)}`;
     },
