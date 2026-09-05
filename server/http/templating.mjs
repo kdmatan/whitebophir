@@ -319,7 +319,7 @@ class Template extends StaticTemplate {
         }
       }
     }
-    const translations = TRANSLATIONS["en"] || {};
+    const translations = TRANSLATIONS["he"] || {};
     const configuration = this.clientConfig;
     const prefix =
       findPathPrefix(parsedUrl.pathname) ||
