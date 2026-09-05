@@ -439,7 +439,7 @@
     "make_temporary_moderator": "Temporären Moderator ernennen",
     "revoke_temporary_moderator": "Temporäre Moderationsrechte von {name} entziehen"
   },
-  "en": {
+  "he": {
     "white-out": "טיפקס",
     "board_name_placeholder": "שם הלוח...",
     "circle": "עיגול",
