@@ -307,7 +307,7 @@ class Template extends StaticTemplate {
       firstHeaderValue(request.headers["accept-language"]) ||
       "";
     const accept_languages = parseAcceptLanguage(accept_language_str);
-    let language = pickLanguage(languages, accept_languages) || "en";
+    let language = pickLanguage(languages, accept_languages) || "he";
     // The loose matcher returns the first language that partially matches, so we need to
     // check if the preferred language is supported to return it
     if (accept_languages.length > 0) {
