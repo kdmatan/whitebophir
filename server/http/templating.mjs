@@ -302,23 +302,13 @@ class Template extends StaticTemplate {
    * @returns {TemplateParameters}
    */
   parameters(parsedUrl, request, isModerator, extraParams) {
-    const accept_language_str =
+     const accept_language_str =
       parsedUrl.searchParams.get("lang") ||
-      firstHeaderValue(request.headers["accept-language"]) ||
-      "";
+       firstHeaderValue(request.headers["accept-language"]) ||
+       "";
+
     const accept_languages = parseAcceptLanguage(accept_language_str);
-    let language = pickLanguage(languages, accept_languages) || "he";
-    // The loose matcher returns the first language that partially matches, so we need to
-    // check if the preferred language is supported to return it
-    if (accept_languages.length > 0) {
-      const preferred = accept_languages[0];
-      if (preferred) {
-        const preferred_language = preferred.tag;
-        if (languages.includes(preferred_language)) {
-          language = preferred_language;
-        }
-      }
-    }
+     let language = "he";
     const translations = TRANSLATIONS[language] || {};
     const configuration = this.clientConfig;
     const prefix =
